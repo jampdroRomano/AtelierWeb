@@ -1,0 +1,15 @@
+:root {
+  /* Paleta Neutra Quente (Fundo e Textos) */
+  --stone-50: #fafaf9;
+  --stone-100: #f5f5f4;
+  --stone-800: #292524;
+  --stone-900: #1c1917;
+
+  /* Cor de Destaque / Identidade do Ateliê (Terracota) */
+  --terracotta-400: #e28f78;
+  --terracotta-500: #e07a5f;
+  --terracotta-600: #c26146;
+
+  /* Cores base */
+  --white: #ffffff;
+}

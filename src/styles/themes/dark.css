@@ -1,0 +1,10 @@
+:root[data-theme='dark'] {
+  --color-bg: var(--stone-900);
+  --color-surface: var(--stone-800); 
+  --color-text: var(--stone-50);
+  --color-text-muted: var(--stone-100);
+  
+  /* Cor principal mais clara para brilhar no fundo escuro */
+  --color-primary: var(--terracotta-400);
+  --color-primary-hover: var(--terracotta-500);
+}

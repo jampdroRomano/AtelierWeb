@@ -1,0 +1,10 @@
+:root, :root[data-theme='light'] {
+  --color-bg: var(--stone-50);
+  --color-surface: var(--white); /* Para cards ou seções destacadas */
+  --color-text: var(--stone-900);
+  --color-text-muted: var(--stone-800);
+  
+  /* Cor principal da marca */
+  --color-primary: var(--terracotta-500);
+  --color-primary-hover: var(--terracotta-600);
+}
