@@ -3,14 +3,14 @@
 ![Status](https://img.shields.io/badge/status-Em_Desenvolvimento-green)
 ![Runtime](https://img.shields.io/badge/tech-Vanilla_JS-yellow)
 ![Styling](https://img.shields.io/badge/styling-CSS_Tokens_&_Themes-blue)
-![Arquitetura](https://img.shields.io/badge/arquitetura-Component_Based-orange)
+![Arquitetura](https://img.shields.io/badge/arquitetura-Vanilla_HTML_CSS_JS-orange)
 
 ---
 
 ## 📖 Descrição do Projeto
 
-**Ateliê Landing Page** é uma interface web leve e moderna desenvolvida com foco em **Clean Architecture** no front-end, dispensando a necessidade de frameworks pesados. Utilizando **Vanilla JavaScript** e uma estrutura de **CSS Design Tokens**, o projeto implementa um sistema de carregamento dinâmico de componentes (`loadComponent`).
-A paleta de cores (tons terrosos, terracota e neutros quentes) foi desenhada para transmitir a essência artesanal e elegante do ateliê.
+**Ateliê Landing Page** é uma interface web leve, sem framework pesado: **HTML** em `index.html`, **CSS** com tokens e temas em `src/styles`, e **JavaScript** em `src/main.js` (tema claro/escuro via `themeManager`). A marcação fica no documento principal; não há carregamento dinâmico de fragmentos HTML.
+A paleta (tons terrosos, terracota e neutros quentes) transmite a identidade artesanal do ateliê.
 
 ---
 
@@ -100,15 +100,9 @@ src/
 ---
 
 
-## 🧩 Componentização
+## 🧩 Front-end
 
-Os componentes são carregados dinamicamente via JavaScript:
-
-```js
-loadComponent('/src/components/navbar/navbar.html', '#app');
-```
-
-Isso permite reutilização sem frameworks.
+O ponto de entrada é `src/main.js`: importa os CSS na ordem correta e chama `initTheme()` para aplicar `data-theme` no `<html>` conforme preferência salva ou `prefers-color-scheme`. Para alternar o tema no UI, importe `toggleTheme` de `themeManager.js` e ligue a um botão.
 
 ---
 

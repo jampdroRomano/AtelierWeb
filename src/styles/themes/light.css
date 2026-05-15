@@ -1,10 +1,30 @@
-:root, :root[data-theme='light'] {
-  --color-bg: var(--stone-50);
-  --color-surface: var(--white); /* Para cards ou seções destacadas */
-  --color-text: var(--stone-900);
-  --color-text-muted: var(--stone-800);
-  
-  /* Cor principal da marca */
-  --color-primary: var(--terracotta-500);
-  --color-primary-hover: var(--terracotta-600);
+:root,
+:root[data-theme='light'] {
+  --color-bg: var(--palette-background);
+  --color-surface: var(--palette-surface);
+  --color-surface-low: var(--palette-surface-container-low);
+  --color-surface-high: var(--palette-surface-container-high);
+  --color-surface-container: var(--palette-surface-container);
+  --color-surface-dim: var(--palette-surface-dim);
+  --color-surface-highest: var(--palette-surface-container-highest);
+  --color-text: var(--palette-on-surface);
+  --color-text-muted: var(--palette-on-surface-variant);
+  --color-secondary: var(--palette-secondary);
+  --color-outline: var(--palette-outline);
+  --color-outline-variant: var(--palette-outline-variant);
+  --color-primary: var(--palette-primary);
+  --color-primary-hover: var(--palette-on-primary-container);
+  --color-on-primary: var(--palette-on-primary);
+  --color-primary-container: var(--palette-primary-container);
+  --color-inverse-surface: var(--palette-inverse-surface);
+  --color-inverse-on-surface: var(--palette-inverse-on-surface);
+  --color-error: var(--palette-error);
+  --color-overlay-dark: rgba(0, 0, 0, 0.4);
+  --color-gradient-hero: color-mix(in srgb, var(--palette-primary-container) 35%, transparent);
+
+  --nav-pill-bg: rgba(255, 255, 255, 0.72);
+  --nav-pill-border: rgba(255, 255, 255, 0.35);
+  --color-glass-bg: rgba(255, 255, 255, 0.7);
+  --color-glass-border: rgba(255, 255, 255, 0.2);
+  --color-card-elevated: var(--palette-surface-container-lowest);
 }

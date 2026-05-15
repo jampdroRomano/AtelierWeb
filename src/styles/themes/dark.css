@@ -1,10 +1,30 @@
 :root[data-theme='dark'] {
-  --color-bg: var(--stone-900);
-  --color-surface: var(--stone-800); 
-  --color-text: var(--stone-50);
-  --color-text-muted: var(--stone-100);
-  
-  /* Cor principal mais clara para brilhar no fundo escuro */
-  --color-primary: var(--terracotta-400);
-  --color-primary-hover: var(--terracotta-500);
+  --color-bg: var(--palette-inverse-surface);
+  --color-surface: #3a3633;
+  --color-surface-low: #2d2a28;
+  --color-surface-high: #45413e;
+  --color-surface-container: #3d3936;
+  --color-surface-dim: #2a2725;
+  --color-surface-highest: #4a4542;
+  --color-text: var(--palette-inverse-on-surface);
+  --color-text-muted: var(--palette-secondary-fixed-dim);
+  --color-secondary: #a8a29e;
+  --color-outline: #88726d;
+  --color-outline-variant: #5c524e;
+  --color-primary: var(--palette-inverse-primary);
+  --color-primary-hover: var(--palette-primary-fixed-dim);
+  --color-on-primary: var(--palette-inverse-surface);
+  --color-primary-container: #c26146;
+  --color-inverse-surface: var(--palette-inverse-on-surface);
+  --color-inverse-on-surface: var(--palette-inverse-surface);
+  --color-error: #ffb4ab;
+  --color-on-primary: var(--palette-inverse-surface);
+  --color-overlay-dark: rgba(0, 0, 0, 0.55);
+  --color-gradient-hero: color-mix(in srgb, var(--palette-primary-container) 25%, transparent);
+
+  --nav-pill-bg: rgba(58, 54, 51, 0.88);
+  --nav-pill-border: rgba(247, 239, 235, 0.1);
+  --color-glass-bg: rgba(58, 54, 51, 0.85);
+  --color-glass-border: rgba(247, 239, 235, 0.12);
+  --color-card-elevated: var(--color-surface-container);
 }

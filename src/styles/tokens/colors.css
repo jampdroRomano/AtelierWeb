@@ -1,15 +1,75 @@
+/* Paleta alinhada ao protótipo code.html (Material-style) */
 :root {
-  /* Paleta Neutra Quente (Fundo e Textos) */
-  --stone-50: #fafaf9;
-  --stone-100: #f5f5f4;
-  --stone-800: #292524;
-  --stone-900: #1c1917;
+  --palette-on-tertiary-container: #2d2f2e;
+  --palette-surface-variant: #e9e1dd;
+  --palette-on-primary-fixed: #3c0800;
+  --palette-secondary-fixed-dim: #cdc5c3;
+  --palette-secondary-container: #e6dedc;
+  --palette-on-background: #1e1b19;
+  --palette-on-tertiary-fixed: #1a1c1c;
+  --palette-on-secondary-fixed-variant: #4b4644;
+  --palette-on-tertiary: #ffffff;
+  --palette-secondary: #635d5c;
+  --palette-error-container: #ffdad6;
+  --palette-on-primary-container: #5b1604;
+  --palette-outline: #88726d;
+  --palette-on-secondary: #ffffff;
+  --palette-surface-container-low: #faf2ee;
+  --palette-tertiary-fixed-dim: #c6c7c6;
+  --palette-primary: #9a442d;
+  --palette-surface-container-highest: #e9e1dd;
+  --palette-tertiary: #5d5f5e;
+  --palette-inverse-on-surface: #f7efeb;
+  --palette-on-secondary-fixed: #1e1b1a;
+  --palette-surface-container: #f4ece8;
+  --palette-on-primary: #ffffff;
+  --palette-inverse-primary: #ffb4a1;
+  --palette-on-error-container: #93000a;
+  --palette-primary-fixed: #ffdbd2;
+  --palette-background: #fff8f5;
+  --palette-on-secondary-container: #676160;
+  --palette-on-primary-fixed-variant: #7c2e19;
+  --palette-on-surface-variant: #55423e;
+  --palette-surface-tint: #9a442d;
+  --palette-on-surface: #1e1b19;
+  --palette-surface-container-high: #eee7e3;
+  --palette-surface-dim: #e0d8d5;
+  --palette-secondary-fixed: #e9e1df;
+  --palette-primary-fixed-dim: #ffb4a1;
+  --palette-outline-variant: #dbc1ba;
+  --palette-surface-bright: #fff8f5;
+  --palette-tertiary-container: #959695;
+  --palette-on-error: #ffffff;
+  --palette-surface: #fff8f5;
+  --palette-inverse-surface: #33302d;
+  --palette-tertiary-fixed: #e2e2e2;
+  --palette-on-tertiary-fixed-variant: #454747;
+  --palette-surface-container-lowest: #ffffff;
+  --palette-primary-container: #e07a5f;
+  --palette-error: #ba1a1a;
 
-  /* Cor de Destaque / Identidade do Ateliê (Terracota) */
-  --terracotta-400: #e28f78;
-  --terracotta-500: #e07a5f;
-  --terracotta-600: #c26146;
+  /* Raios (protótipo Tailwind extend) */
+  --radius-sm: 0.125rem;
+  --radius-md: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-full: 0.75rem;
 
-  /* Cores base */
-  --white: #ffffff;
+  /* Espaçamento */
+  --space-unit: 4px;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 3rem;
+  --space-xl: 5rem;
+  --space-gutter: 24px;
+  --container-max: 1280px;
+
+  /* Sombras */
+  --shadow-card: 0 20px 40px rgba(41, 37, 36, 0.08);
+  --shadow-nav: 0 20px 50px rgba(30, 27, 25, 0.06);
+  --shadow-primary-soft: 0 12px 40px rgba(154, 68, 45, 0.2);
+
+  /* Header pill */
+  --nav-pill-bg: rgba(255, 255, 255, 0.72);
+  --nav-pill-border: rgba(255, 255, 255, 0.35);
 }
