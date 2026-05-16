@@ -17,46 +17,45 @@
 
 <body>
   <div id="app">
-    <!-- Marcação da landing (navbar, seções, rodapé) fica aqui dentro de #app -->
-    <section id="servicos" class="servicos-section">
-      <div class="servicos-container">
-        <div class="servicos-header">
-          <h2 class="title-h1">Nossos Serviços</h2>
-          <p class="subtitle">Experiências táteis e visuais desenhadas com exclusividade.</p>
+    <section id="servicos" class="servicos">
+      <div class="servicos__container">
+
+        <div class="servicos__header">
+          <h2 class="servicos__main-title">Nossos Serviços</h2>
+          <p class="servicos__subtitle">Experiências táteis e visuais desenhadas com exclusividade.</p>
         </div>
 
-        <div class="bento-grid">
+        <div class="servicos__grid">
 
-          <div class="card-principal group">
-            <div class="slideshow-container">
-              <img src="https://picsum.photos/id/48/1000/1500" alt="Foto demonstrativa 1" class="slide-img active" />
-              <img src="https://picsum.photos/id/73/1000/1500" alt="Foto demonstrativa 2" class="slide-img" />
-              <div class="overlay-gradient"></div>
+          <div class="servicos-card servicos-card--featured">
+            <div class="servicos-card__slideshow">
+              <img src="https://picsum.photos/id/48/1000/1500" alt="Design Personalizado 1"
+                class="servicos-card__img active" />
+              <img src="https://picsum.photos/id/73/1000/1500" alt="Design Personalizado 2"
+                class="servicos-card__img" />
+              <div class="servicos-card__overlay"></div>
             </div>
 
-            <div class="card-content-overlay">
-              <h3 class="title-h3 text-white">Design Personalizado</h3>
-              <p class="text-body text-white">Projetos únicos concebidos a partir da sua visão e necessidades
-                específicas, utilizando materiais nobres.</p>
+            <div class="servicos-card__content">
+              <h3 class="servicos-card__title">Design Personalizado</h3>
+              <p class="servicos-card__text">Projetos únicos concebidos a partir da sua visão...</p>
             </div>
           </div>
 
-          <div class="card-menor">
-            <div class="icon-container">
+          <div class="servicos-card">
+            <div class="servicos-card__icon">
               <span class="material-symbols-outlined">palette</span>
             </div>
-            <h3 class="title-h3">Curadoria de Cores</h3>
-            <p class="text-body">Consultoria especializada em paletas orgânicas, focada em tons de terracota, pedra e
-              pigmentos naturais.</p>
+            <h3 class="servicos-card__title">Curadoria de Cores</h3>
+            <p class="servicos-card__text">Consultoria especializada em paletas orgânicas...</p>
           </div>
 
-          <div class="card-menor">
-            <div class="icon-container">
+          <div class="servicos-card">
+            <div class="servicos-card__icon">
               <span class="material-symbols-outlined">handyman</span>
             </div>
-            <h3 class="title-h3">Restauração</h3>
-            <p class="text-body">Recuperação meticulosa de peças artesanais, devolvendo a integridade estrutural e a
-              beleza original.</p>
+            <h3 class="servicos-card__title">Restauração</h3>
+            <p class="servicos-card__text">Recuperação meticulosa de peças artesanais...</p>
           </div>
 
         </div>

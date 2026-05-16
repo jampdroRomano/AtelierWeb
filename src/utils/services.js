@@ -1,5 +1,5 @@
 export function startSlideshow() {
-    const slides = document.querySelectorAll('.card-principal .slide-img');
+    const slides = document.querySelectorAll('.servicos-card--featured .servicos-card__img');
     let indexAtual = 0;
 
     if (slides.length === 0) {
