@@ -1,24 +1,69 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>L'Atelier — Ateliê Digital</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Hanken+Grotesk:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div id="app">
-      <!-- Marcação da landing (navbar, seções, rodapé) fica aqui dentro de #app -->
-    </div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L'Atelier — Ateliê Digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Hanken+Grotesk:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div id="app">
+    <!-- Marcação da landing (navbar, seções, rodapé) fica aqui dentro de #app -->
+    <section id="servicos" class="servicos-section">
+      <div class="servicos-container">
+        <div class="servicos-header">
+          <h2 class="title-h1">Nossos Serviços</h2>
+          <p class="subtitle">Experiências táteis e visuais desenhadas com exclusividade.</p>
+        </div>
+
+        <div class="bento-grid">
+
+          <div class="card-principal group">
+            <div class="slideshow-container">
+              <img src="https://picsum.photos/id/48/1000/1500" alt="Foto demonstrativa 1" class="slide-img active" />
+              <img src="https://picsum.photos/id/73/1000/1500" alt="Foto demonstrativa 2" class="slide-img" />
+              <div class="overlay-gradient"></div>
+            </div>
+
+            <div class="card-content-overlay">
+              <h3 class="title-h3 text-white">Design Personalizado</h3>
+              <p class="text-body text-white">Projetos únicos concebidos a partir da sua visão e necessidades
+                específicas, utilizando materiais nobres.</p>
+            </div>
+          </div>
+
+          <div class="card-menor">
+            <div class="icon-container">
+              <span class="material-symbols-outlined">palette</span>
+            </div>
+            <h3 class="title-h3">Curadoria de Cores</h3>
+            <p class="text-body">Consultoria especializada em paletas orgânicas, focada em tons de terracota, pedra e
+              pigmentos naturais.</p>
+          </div>
+
+          <div class="card-menor">
+            <div class="icon-container">
+              <span class="material-symbols-outlined">handyman</span>
+            </div>
+            <h3 class="title-h3">Restauração</h3>
+            <p class="text-body">Recuperação meticulosa de peças artesanais, devolvendo a integridade estrutural e a
+              beleza original.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>

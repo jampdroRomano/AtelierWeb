@@ -1,0 +1,169 @@
+.servicos-section {
+    padding: 5rem 1.5rem;
+    background-color: var(--palette-background);
+    font-family: 'Hanken Grotesk', sans-serif;
+    max-width: 100%;
+}
+
+.servicos-container {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.title-h1 {
+    font-family: 'EB Garamond', serif;
+    font-size: 3.5rem;
+    color: var(--palette-on-surface);
+    margin-bottom: 1rem;
+    font-weight: var(--fw-medium);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+}
+
+/* alteracoes para quando for titulo do card principal */
+.card-principal .title-h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.125rem;
+    color: var(--palette-on-surface-variant);
+    max-width: 42rem;
+    margin: 0 auto;
+}
+
+.title-h3 {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: var(--fw-medium);
+    color: var(--palette-on-surface);
+    margin-bottom: 0;
+}
+
+.text-body {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--palette-on-surface-variant);
+}
+
+.text-white {
+    color: var(--white) !important;
+}
+
+/* Header alinhado ao centro */
+.servicos-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+/*
+Bento Grid Mobile
+*/
+.bento-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 coluna no mobile */
+    gap: 1.5rem;
+}
+
+.card-principal, .card-menor {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* efeito do card principal */
+.card-principal:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(41, 37, 36, 0.08);
+}
+
+/* efeito de zoom na imagem quando passa o mouse no card principal */
+.card-principal:hover .slide-img.active {
+    transform: scale(1.05);
+}
+
+/* efeito do card menor, reforçar a sombra */
+.card-menor:hover {
+    box-shadow: 0 20px 40px rgba(41, 37, 36, 0.08);
+}
+
+.card-menor {
+    background-color: var(--palette-surface-container);
+    border: 1.5px solid var(--palette-surface-container-highest);
+    padding: 1.5rem 1rem 1.5rem 1.65rem; /* top right bottom left */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+
+.icon-container {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.6rem;
+    background-color: var(--palette-surface-container-highest);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--palette-surface-tint);
+}
+
+.card-principal {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.slideshow-container {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.slide-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 0.7s ease;
+}
+
+.slide-img.active {
+    opacity: 1; /* Mostra apenas a imagem com a classe 'active' */
+}
+
+.overlay-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 60%);
+    z-index: 1;
+}
+
+.card-content-overlay {
+    position: relative;
+    z-index: 2;
+    padding: 1.5rem;
+}
+
+/*
+Bento Grid Desktop
+*/
+@media (min-width: 768px) {
+    .bento-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas no desktop */
+        grid-template-rows: repeat(2, 1fr); /* 2 linhas */
+    }
+
+    /* Card principal ocupar 2 colunas e 2 linhas */
+    .card-principal {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+}
