@@ -1,0 +1,130 @@
+@import url('../../styles/tokens/colors.css');
+@import url('../../styles/tokens/typography.css');
+
+/* ===== SEÇÃO SOBRE ===== */
+ 
+.section-sobre {
+  padding: var(--space-md) var(--space-gutter);
+  background-color: var(--palette-surface-container-low);
+  font-family: var(--font-body);
+}
+ 
+@media (min-width: 768px) {
+  .section-sobre {
+    padding: var(--space-lg) var(--space-gutter);
+  }
+}
+ 
+/* ===== CONTAINER ===== */
+ 
+.container-max {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+ 
+/* ===== GRID LAYOUT ===== */
+ 
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  align-items: center;
+}
+ 
+@media (min-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+  }
+}
+ 
+/* ===== IMAGE WRAPPER ===== */
+ 
+.image-wrapper {
+  order: 2;
+}
+ 
+@media (min-width: 768px) {
+  .image-wrapper {
+    order: 1;
+  }
+}
+ 
+.image-figure {
+  position: relative;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  border: 2px solid var(--palette-surface);
+  box-shadow: var(--shadow-card);
+  aspect-ratio: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+ 
+@media (min-width: 768px) {
+  .image-figure {
+    border-width: 4px;
+  }
+}
+ 
+.image-figure:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-primary-soft);
+}
+ 
+.image-content {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+ 
+/* ===== CONTENT WRAPPER ===== */
+ 
+.content-wrapper {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+ 
+@media (min-width: 768px) {
+  .content-wrapper {
+    order: 2;
+    gap: var(--space-md);
+  }
+}
+ 
+/* ===== TYPOGRAPHY ===== */
+ 
+.heading-primary {
+  font-family: var(--font-display);
+  font-size: var(--text-h2-size);
+  font-weight: var(--fw-medium);
+  color: var(--palette-on-surface);
+  line-height: var(--text-h2-lh);
+  margin: 0;
+}
+ 
+.text-body {
+  font-family: var(--font-body);
+  font-size: var(--text-body-md-size);
+  font-weight: var(--fw-regular);
+  color: var(--palette-on-surface-variant);
+  line-height: var(--text-body-md-lh);
+  margin: 0;
+}
+ 
+/* ===== DIVIDER ===== */
+ 
+.divider-line {
+  width: 2rem;
+  height: 2px;
+  background-color: var(--palette-primary);
+  border: none;
+}
+ 
+@media (min-width: 768px) {
+  .divider-line {
+    width: 2.5rem;
+  }
+}
