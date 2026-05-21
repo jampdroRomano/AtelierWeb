@@ -1,0 +1,42 @@
+
+#app {
+  background-color: var(--palette-background);
+  color: var(--palette-on-surface);
+}
+
+#app .servicos {
+  background-color: var(--palette-background);
+}
+
+#app .servicos__main-title {
+  color: var(--palette-on-surface);
+}
+
+#app .servicos__subtitle {
+  color: var(--palette-on-surface-variant);
+}
+
+#app .servicos-card__title {
+  color: var(--palette-on-surface);
+}
+
+#app .servicos-card__text {
+  color: var(--palette-on-surface-variant);
+}
+
+#app .servicos-card:not(.servicos-card--featured) {
+  background-color: var(--palette-surface-container);
+  border-color: var(--palette-surface-container-highest);
+}
+
+#app .servicos-card__icon {
+  background-color: var(--palette-surface-container-highest);
+  color: var(--palette-surface-tint);
+}
+
+#app .servicos-card--featured .servicos-card__title,
+#app .servicos-card--featured .servicos-card__text,
+:root[data-theme='dark'] #app .servicos-card--featured .servicos-card__title,
+:root[data-theme='dark'] #app .servicos-card--featured .servicos-card__text {
+  color: #ffffff !important;
+}

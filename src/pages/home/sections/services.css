@@ -20,7 +20,7 @@
     letter-spacing: -0.01em;
 }
 
-/* alteracoes para quando for titulo do card principal */
+
 .servicos-card--featured .servicos-card__title {
     font-size: 1.75rem;
     margin-bottom: 0.5rem;
@@ -49,7 +49,7 @@
 
 .servicos-card--featured .servicos-card__title,
 .servicos-card--featured .servicos-card__text {
-    color: var(--white) !important; /* titulo e texto do card principal em branco */
+    color: #ffffff !important;
 }
 
 .servicos__header {

@@ -16,6 +16,50 @@
 </head>
 
 <body>
+  <header id="navbar" class="navbar">
+    <a href="#" class="navbar__brand" aria-label="Início — Ateliê da Celia">
+      <img
+        src="/src/assets/icons/logo-imagem.png"
+        alt=""
+        class="navbar__logo-icon"
+        width="40"
+        height="40"
+        aria-hidden="true"
+      />
+      <span class="navbar__brand-name">Ateliê da Celia</span>
+    </a>
+
+    <nav class="navbar__menu" aria-label="Principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="navbar__actions">
+      <button type="button" id="theme-toggle" class="navbar__icon-btn" aria-label="Alternar tema">
+        <span class="material-symbols-outlined">contrast</span>
+      </button>
+      <button
+        type="button"
+        class="navbar__icon-btn navbar__menu-toggle mobile-only"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+      >
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </header>
+
+  <nav id="mobile-menu" class="navbar-mobile" aria-label="Menu mobile">
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
   <div id="app">
     <section id="servicos" class="servicos">
       <div class="servicos__container">
