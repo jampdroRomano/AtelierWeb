@@ -2,100 +2,144 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ateliê da celia — Ateliê Digital</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Hanken+Grotesk:wght@400;600&display=swap"
-    rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
-    rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ateliê da celia — Ateliê Digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Hanken+Grotesk:wght@400;600&display=swap"
+  rel="stylesheet" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
+  rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <<section class="hero">
-    <div class="hero_container">
-        
-        <div class="hero_content">
-            <span class="hero_tag">Tradição & Inovação</span>
-            <h1 class="hero_title">
-                A Arte do <span class="italic-brand">Fazer</span> <br> Manual na Era Digital.
-            </h1>
-            <p class="hero_subtitle">
-                Onde a precisão contemporânea encontra o calor do artesanato. Criamos experiências e produtos com alma, propósito e perfeição técnica.
-            </p>
-            <div class="hero_actions">
-                <a class="hero_button" href="#servicos">Descubra o Ateliê</a>
-            </div>
-        </div>
 
-        <div class="hero_media">
-            <div class="image_wrapper">
-                <img alt="Ateliê de Costura Minimalista" class="hero_image" src="estudio-costura-minimalista.png"/>
-                
-                <div class="glass_card">
-                    <p class="glass_card_title">Detalhes</p>
-                    <p class="glass_card_text">
-                        Cada peça é meticulosamente pensada para durar uma vida inteira.
-                    </p>
-                </div>
-            </div>
-        </div>
+ <header id="navbar" class="navbar">
+  <a href="#" class="navbar__brand" aria-label="Início — Ateliê da Celia">
+    <img
+      src="/src/assets/icons/logo-imagem.png"
+      alt=""
+      class="navbar__logo-icon"
+      width="40"
+      height="40"
+      aria-hidden="true"
+    />
+    <span class="navbar__brand-name">Ateliê da Celia</span>
+  </a>
 
-    </div>
-    </section>
+  <nav class="navbar__menu" aria-label="Principal">
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="#contato">Contato</a>
+  </nav>
 
-        </section>
-  <div id="app">
-    <section id="servicos" class="servicos">
-      <div class="servicos__container">
-
-        <div class="servicos__header">
-          <h2 class="servicos__main-title">Nossos Serviços</h2>
-          <p class="servicos__subtitle">Experiências táteis e visuais desenhadas com exclusividade.</p>
-        </div>
-
-        <div class="servicos__grid">
-
-          <div class="servicos-card servicos-card--featured">
-            <div class="servicos-card__slideshow">
-              <img src="https://picsum.photos/id/48/1000/1500" alt="Design Personalizado 1"
-                class="servicos-card__img active" />
-              <img src="https://picsum.photos/id/73/1000/1500" alt="Design Personalizado 2"
-                class="servicos-card__img" />
-              <div class="servicos-card__overlay"></div>
-            </div>
-
-            <div class="servicos-card__content">
-              <h3 class="servicos-card__title">Design Personalizado</h3>
-              <p class="servicos-card__text">Projetos únicos concebidos a partir da sua visão...</p>
-            </div>
-          </div>
-
-          <div class="servicos-card">
-            <div class="servicos-card__icon">
-              <span class="material-symbols-outlined">palette</span>
-            </div>
-            <h3 class="servicos-card__title">Curadoria de Cores</h3>
-            <p class="servicos-card__text">Consultoria especializada em paletas orgânicas...</p>
-          </div>
-
-          <div class="servicos-card">
-            <div class="servicos-card__icon">
-              <span class="material-symbols-outlined">handyman</span>
-            </div>
-            <h3 class="servicos-card__title">Restauração</h3>
-            <p class="servicos-card__text">Recuperação meticulosa de peças artesanais...</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
+  <div class="navbar__actions">
+    <button type="button" id="theme-toggle" class="navbar__icon-btn" aria-label="Alternar tema">
+      <span class="material-symbols-outlined">contrast</span>
+    </button>
+    <button
+      type="button"
+      class="navbar__icon-btn navbar__menu-toggle mobile-only"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+    >
+      <span class="material-symbols-outlined">menu</span>
+    </button>
   </div>
-  <script type="module" src="/src/main.js"></script>
+</header>
+
+<nav id="mobile-menu" class="navbar-mobile" aria-label="Menu mobile">
+  <a href="#sobre">Sobre</a>
+  <a href="#servicos">Serviços</a>
+  <a href="#galeria">Galeria</a>
+  <a href="#depoimentos">Depoimentos</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<section class="hero">
+  <div class="hero_container">
+
+      <div class="hero_content">
+          <span class="hero_tag">Tradição & Inovação</span>
+          <h1 class="hero_title">
+              A Arte do <span class="italic-brand">Fazer</span> <br> Manual na Era Digital.
+          </h1>
+          <p class="hero_subtitle">
+              Onde a precisão contemporânea encontra o calor do artesanato. Criamos experiências e produtos com alma, propósito e perfeição técnica.
+          </p>
+          <div class="hero_actions">
+              <a class="hero_button" href="#servicos">Descubra o Ateliê</a>
+          </div>
+      </div>
+
+      <div class="hero_media">
+          <div class="image_wrapper">
+              <img alt="Ateliê de Costura Minimalista" class="hero_image" src="estudio-costura-minimalista.png"/>
+
+              <div class="glass_card">
+                  <p class="glass_card_title">Detalhes</p>
+                  <p class="glass_card_text">
+                      Cada peça é meticulosamente pensada para durar uma vida inteira.
+                  </p>
+              </div>
+          </div>
+      </div>
+
+  </div>
+  </section>
+
+<div id="app">
+  <section id="servicos" class="servicos">
+    <div class="servicos__container">
+
+      <div class="servicos__header">
+        <h2 class="servicos__main-title">Nossos Serviços</h2>
+        <p class="servicos__subtitle">Experiências táteis e visuais desenhadas com exclusividade.</p>
+      </div>
+
+      <div class="servicos__grid">
+
+        <div class="servicos-card servicos-card--featured">
+          <div class="servicos-card__slideshow">
+            <img src="https://picsum.photos/id/48/1000/1500" alt="Design Personalizado 1"
+              class="servicos-card__img active" />
+            <img src="https://picsum.photos/id/73/1000/1500" alt="Design Personalizado 2"
+              class="servicos-card__img" />
+            <div class="servicos-card__overlay"></div>
+          </div>
+
+          <div class="servicos-card__content">
+            <h3 class="servicos-card__title">Design Personalizado</h3>
+            <p class="servicos-card__text">Projetos únicos concebidos a partir da sua visão...</p>
+          </div>
+        </div>
+
+        <div class="servicos-card">
+          <div class="servicos-card__icon">
+            <span class="material-symbols-outlined">palette</span>
+          </div>
+          <h3 class="servicos-card__title">Curadoria de Cores</h3>
+          <p class="servicos-card__text">Consultoria especializada em paletas orgânicas...</p>
+        </div>
+
+        <div class="servicos-card">
+          <div class="servicos-card__icon">
+            <span class="material-symbols-outlined">handyman</span>
+          </div>
+          <h3 class="servicos-card__title">Restauração</h3>
+          <p class="servicos-card__text">Recuperação meticulosa de peças artesanais...</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>
+<script type="module" src="/src/main.js"></script>
 </body>
 
 </html>
