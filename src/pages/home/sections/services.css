@@ -1,6 +1,6 @@
 .servicos {
     padding: 5rem 1.5rem;
-    background-color: var(--palette-background);
+    background-color: var(--color-bg);
     font-family: 'Hanken Grotesk', sans-serif;
     max-width: 100%;
 }
@@ -13,7 +13,7 @@
 .servicos__main-title {
     font-family: 'EB Garamond', serif;
     font-size: 3.5rem;
-    color: var(--palette-on-surface);
+    color: var(--color-text);
     margin-bottom: 1rem;
     font-weight: var(--fw-medium);
     line-height: 1.2;
@@ -28,7 +28,7 @@
 
 .servicos__subtitle {
     font-size: 1.125rem;
-    color: var(--palette-on-surface-variant);
+    color: var(--color-text-muted);
     max-width: 42rem;
     margin: 0 auto;
 }
@@ -37,14 +37,14 @@
     font-family: 'EB Garamond', serif;
     font-size: 1.15rem;
     font-weight: var(--fw-medium);
-    color: var(--palette-on-surface);
+    color: var(--color-text);
     margin-bottom: 0;
 }
 
 .servicos-card__text {
     font-size: 0.9rem;
     line-height: 1.6;
-    color: var(--palette-on-surface-variant);
+    color: var(--color-text-muted);
 }
 
 .servicos-card--featured .servicos-card__title,
@@ -90,8 +90,8 @@ Bento Grid Mobile
 }
 
 .servicos-card:not(.servicos-card--featured) {
-    background-color: var(--palette-surface-container);
-    border: 1.5px solid var(--palette-surface-container-highest);
+    background-color: var(--color-surface-container);
+    border: 1.5px solid var(--color-surface-highest);
     padding: 1.5rem 1rem 1.5rem 1.65rem; /* top right bottom left */
     display: flex;
     flex-direction: column;
@@ -103,11 +103,11 @@ Bento Grid Mobile
     width: 3rem;
     height: 3rem;
     border-radius: 0.6rem;
-    background-color: var(--palette-surface-container-highest);
+    background-color: var(--color-surface-highest);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--palette-surface-tint);
+    color: var(--color-primary);
 }
 
 .servicos-card--featured {
