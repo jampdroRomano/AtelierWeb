@@ -22,9 +22,20 @@
   --color-overlay-dark: rgba(0, 0, 0, 0.55);
   --color-gradient-hero: color-mix(in srgb, var(--palette-primary-container) 25%, transparent);
 
-  --nav-pill-bg: rgba(58, 54, 51, 0.88);
-  --nav-pill-border: rgba(247, 239, 235, 0.1);
-  --color-glass-bg: rgba(58, 54, 51, 0.85);
-  --color-glass-border: rgba(247, 239, 235, 0.12);
+  /* Terra / marrom  */
+  --nav-pill-bg: #332f2e;
+  --nav-pill-border: rgba(247, 239, 235, 0.12);
+  --nav-brand-color: #ffffff;
+  --nav-link-color: #ffffff;
+  --nav-link-hover-color: var(--palette-inverse-primary);
+  --nav-action-color: #ffffff;
+  --nav-action-hover-bg: rgba(255, 255, 255, 0.12);
+  --glass-card-bg: #332f2e;
+  --glass-card-border: rgba(247, 239, 235, 0.12);
+  --mobile-menu-bg: #332f2e;
+  --mobile-menu-hover-bg: rgba(255, 255, 255, 0.1);
+  --mobile-menu-hover-color: var(--palette-inverse-primary);
+  --color-glass-bg: var(--glass-card-bg);
+  --color-glass-border: var(--glass-card-border);
   --color-card-elevated: var(--color-surface-container);
 }

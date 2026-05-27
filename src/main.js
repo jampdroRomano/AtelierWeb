@@ -5,11 +5,16 @@ import './styles/themes/light.css';
 import './styles/themes/dark.css';
 import './styles/base/global.css';
 import './pages/home/sections/services.css'
+import './pages/home/sections/home.css'
+import './components/navbar/navbar.css';
+
 import { initTheme } from './utils/themeManager.js';
-import { startSlideshow } from './utils/services.js'
+import { initNavbar } from './components/navbar/navbar.js';
+import { startSlideshow } from './utils/services.js';
 
 function init() {
   initTheme();
+  initNavbar();
   startSlideshow();
 }
 
