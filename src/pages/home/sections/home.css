@@ -1,11 +1,9 @@
-
 .hero {
-    width: 100%;
+    width: 79%;
     max-width: 1280px;
     margin: 0 auto;
     padding: 80px 24px;
 }
-
 
 .hero_container {
     display: grid;
@@ -15,9 +13,28 @@
     width: 100%;
 }
 
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero_container {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 32px;
+    }
+
+    .hero_title {
+        font-size: 2.5rem; 
+    }
+
+    .hero_media {
+        position: relative; 
+        width: 100%;
+    }
+}
+
+
 @media (min-width: 1024px) {
     .hero_container {
         grid-template-columns: repeat(12, minmax(0, 1fr));
+        gap: 48px; 
     }
     
     .hero_content {
@@ -25,6 +42,7 @@
     }
     
     .hero_media {
+        position: relative; 
         grid-column: span 7; 
         display: flex;
         justify-content: flex-end;
@@ -58,14 +76,14 @@
     margin-bottom: 24px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .hero_title {
         font-size: 3.75rem;
     }
 }
 
 .italic-brand {
-    color: #833722;
+    color: #CD7B4C;
     font-style: italic;
 }
 
@@ -83,13 +101,11 @@
     }
 }
 
-
-
 .hero_button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: #833722;
+    background-color: #CD7B4C;
     color: #fff;
     border-radius: 12px;
     padding: 14px 32px;
@@ -101,9 +117,6 @@
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 10px 20px rgba(154, 68, 45, 0.2);
 }
-
-
-
 
 .hero_media {
     width: 100%;
