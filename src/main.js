@@ -11,11 +11,17 @@ import './components/navbar/navbar.css';
 import { initTheme } from './utils/themeManager.js';
 import { initNavbar } from './components/navbar/navbar.js';
 import { startSlideshow } from './utils/services.js';
+import { initContactForm } from './utils/contactForm.js';
 
-function init() {
-  initTheme();
-  initNavbar();
-  startSlideshow();
-}
+document.addEventListener('DOMContentLoaded', () => {
+  initContactForm();
 
-init();
+  function init() {
+    initTheme();
+    initNavbar();
+    startSlideshow();
+  }
+
+  init();
+
+});
