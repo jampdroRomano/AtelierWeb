@@ -69,14 +69,14 @@
   --shadow-nav: 0 4px 30px rgba(0, 0, 0, 0.1);
   --shadow-primary-soft: 0 12px 40px rgba(154, 68, 45, 0.2);
 
-  /* Glass (padrão JoaoRomanoPortifolio — fundo translúcido + blur) */
+  /* Glass */
   --nav-pill-bg: rgba(30, 27, 25, 0.15);
   --nav-pill-border: rgba(255, 255, 255, 0.1);
   --nav-link-color: var(--palette-on-surface-variant);
   --nav-link-hover-color: var(--palette-primary);
   --nav-action-color: var(--palette-primary);
   --nav-action-hover-bg: var(--palette-surface-container-high);
-  --glass-blur: 15px;
+  --glass-blur: 8px;
   --glass-card-bg: rgba(30, 27, 25, 0.7);
   --glass-card-border: rgba(255, 255, 255, 0.1);
   --mobile-menu-bg: var(--palette-surface-container-lowest);

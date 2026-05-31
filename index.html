@@ -5,6 +5,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Ateliê da celia — Ateliê Digital</title>
+<link rel="icon" type="image/x-icon" href="/src/assets/icons/asset01.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="/src/assets/icons/asset.ico" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
@@ -341,7 +343,88 @@
 
     </div>
   </section>
+
+  <section id="contato" class="contato">
+    <div class="contato__container">
+      <div class="contato__card">
+        <div class="contato__info">
+          <h2 class="contato__title text-h2">Iniciar um Diálogo</h2>
+          <p class="contato__intro text-body-md">
+            Preencha o formulário abaixo para nos contar sobre sua visão. Retornaremos em breve para agendar uma consulta em nosso ateliê.
+          </p>
+          <div class="contato__details">
+            <p class="contato__detail">
+              <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+              <a href="mailto:atelier@exemplo.com">atelier@exemplo.com</a>
+            </p>
+            <p class="contato__detail">
+              <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+              São Paulo, SP - Brasil
+            </p>
+          </div>
+        </div>
+
+        <form id="contato-form" class="contato__form" novalidate>
+          <div class="contato__field">
+            <label class="contato__label text-label-caps" for="contato-nome">Nome Completo</label>
+            <input
+              class="contato__input"
+              type="text"
+              id="contato-nome"
+              name="nome"
+              required
+              autocomplete="name"
+              placeholder="Como devemos chamá-lo?"
+            />
+          </div>
+          <div class="contato__field">
+            <label class="contato__label text-label-caps" for="contato-servico">Serviço Pretendido</label>
+            <select class="contato__input contato__select" id="contato-servico" name="servico" required>
+              <option value="" disabled selected>Selecione uma área de interesse</option>
+              <option value="design">Design Personalizado</option>
+              <option value="curadoria">Curadoria de Cores</option>
+              <option value="restauracao">Restauração</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+          <div class="contato__field">
+            <label class="contato__label text-label-caps" for="contato-descricao">Descrição do Problema / Visão</label>
+            <textarea
+              class="contato__input contato__textarea"
+              id="contato-descricao"
+              name="descricao"
+              rows="3"
+              required
+              placeholder="Descreva brevemente o que você busca realizar conosco..."
+            ></textarea>
+          </div>
+          <div class="contato__actions">
+            <button type="submit" class="contato__submit text-label-caps">Enviar Mensagem</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
 </div>
+
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__brand">
+      <p class="footer__name">Ateliê da Celia</p>
+      <p class="footer__legal text-body-md">
+        © 2024 Ateliê da Celia.<br />
+        CNPJ: 00.000.000/0001-00.<br />
+        Todos os direitos reservados.
+      </p>
+    </div>
+    <nav class="footer__nav" aria-label="Rodapé">
+      <a class="footer__link text-label-caps" href="#">Privacidade LGPD</a>
+      <a class="footer__link text-label-caps" href="#">Localização</a>
+      <a class="footer__link text-label-caps" href="#">Termos de Uso</a>
+    </nav>
+  </div>
+</footer>
+
 <script type="module" src="/src/main.js"></script>
 
 
