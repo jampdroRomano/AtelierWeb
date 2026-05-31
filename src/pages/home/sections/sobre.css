@@ -31,7 +31,7 @@
 
 .section-sobre {
   padding: var(--space-lg) var(--space-gutter);
-  background-color: var(--sobre-bg);
+  background-color: var(--color-surface-low);
   font-family: var(--font-body);
 }
 
