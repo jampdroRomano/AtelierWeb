@@ -14,8 +14,8 @@
   box-sizing: border-box;
   border-radius: var(--radius-full);
   background: var(--nav-pill-bg);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: blur(var(--glass-blur, 8px));
+  -webkit-backdrop-filter: blur(var(--glass-blur, 8px));
   border: 1px solid var(--nav-pill-border);
   box-shadow: var(--shadow-nav);
   transition:
@@ -149,9 +149,9 @@
   transform: translateY(0);
   pointer-events: auto;
   padding: 0.75rem 0;
-  background: var(--palette-surface-container-lowest);
+  background: var(--mobile-menu-bg);
   border-radius: 1.25rem;
-  border: none;
+  border: 1px solid var(--nav-pill-border);
   box-shadow: var(--shadow-card);
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
@@ -159,7 +159,7 @@
 
 .navbar-mobile a,
 #mobile-menu a {
-  color: var(--palette-on-surface-variant);
+  color: var(--nav-link-color, var(--color-text-muted));
   text-decoration: none;
   padding: 0.75rem 1.5rem;
   font-family: var(--font-body);
@@ -175,13 +175,31 @@
 
 .navbar-mobile a:hover,
 #mobile-menu a:hover {
-  background-color: var(--palette-surface-container-high);
-  color: var(--palette-primary);
+  background-color: var(--mobile-menu-hover-bg);
+  color: var(--mobile-menu-hover-color, var(--color-primary));
+}
+
+:root[data-theme='dark'] .navbar-mobile.open,
+:root[data-theme='dark'] #mobile-menu.open {
+  background: var(--mobile-menu-bg);
+  border-color: var(--nav-pill-border);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+:root[data-theme='dark'] .navbar-mobile a,
+:root[data-theme='dark'] #mobile-menu a {
+  color: var(--color-text);
+}
+
+:root[data-theme='dark'] .navbar-mobile a:hover,
+:root[data-theme='dark'] #mobile-menu a:hover {
+  background-color: var(--mobile-menu-hover-bg);
+  color: var(--mobile-menu-hover-color);
 }
 
 :root[data-theme='dark'] .navbar {
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 :root[data-theme='dark'] .navbar__brand {
