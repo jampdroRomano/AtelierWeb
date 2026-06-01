@@ -1,41 +1,48 @@
 :root[data-theme='dark'] {
+  /* Primária: mesma função do home / body / serviços / depoimentos */
   --color-bg: var(--palette-inverse-surface);
-  --color-surface: #3a3633;
-  --color-surface-low: #2d2a28;
-  --color-surface-high: #45413e;
-  --color-surface-container: #3d3936;
-  --color-surface-dim: #2a2725;
-  --color-surface-highest: #4a4542;
+
+  /* Secundária: mesma cor do fundo da secção contato (faixas alternadas) */
+  --color-surface-highest: color-mix(
+    in srgb,
+    var(--palette-inverse-surface) 82%,
+    var(--palette-inverse-on-surface)
+  );
+  --color-surface-low: var(--color-surface-highest);
+
+  --color-surface: color-mix(in srgb, var(--palette-inverse-surface) 94%, var(--palette-inverse-on-surface));
+  --color-surface-high: color-mix(in srgb, var(--palette-inverse-surface) 88%, var(--palette-inverse-on-surface));
+  --color-surface-container: color-mix(in srgb, var(--palette-inverse-surface) 90%, var(--palette-inverse-on-surface));
+  --color-surface-dim: color-mix(in srgb, var(--palette-inverse-surface) 72%, var(--palette-on-surface));
   --color-text: var(--palette-inverse-on-surface);
   --color-text-muted: var(--palette-secondary-fixed-dim);
-  --color-secondary: #a8a29e;
-  --color-outline: #88726d;
-  --color-outline-variant: #5c524e;
+  --color-secondary: var(--palette-secondary-fixed-dim);
+  --color-outline: var(--palette-outline);
+  --color-outline-variant: color-mix(in srgb, var(--palette-outline) 55%, var(--palette-inverse-surface));
   --color-primary: var(--palette-inverse-primary);
   --color-primary-hover: var(--palette-primary-fixed-dim);
   --color-on-primary: var(--palette-inverse-surface);
-  --color-primary-container: #c26146;
+  --color-primary-container: var(--palette-primary-container);
   --color-inverse-surface: var(--palette-inverse-on-surface);
   --color-inverse-on-surface: var(--palette-inverse-surface);
-  --color-error: #ffb4ab;
-  --color-on-primary: var(--palette-inverse-surface);
+  --color-error: var(--palette-inverse-primary);
   --color-overlay-dark: rgba(0, 0, 0, 0.55);
   --color-gradient-hero: color-mix(in srgb, var(--palette-primary-container) 25%, transparent);
 
-  /* Terra / marrom  */
-  --nav-pill-bg: #332f2e;
-  --nav-pill-border: rgba(247, 239, 235, 0.12);
-  --nav-brand-color: #ffffff;
-  --nav-link-color: #ffffff;
+  --nav-pill-bg: color-mix(in srgb, var(--palette-inverse-surface) 94%, transparent);
+  --nav-pill-border: color-mix(in srgb, var(--palette-inverse-on-surface) 18%, transparent);
+  --nav-brand-color: var(--color-text);
+  --nav-link-color: var(--color-text);
   --nav-link-hover-color: var(--palette-inverse-primary);
-  --nav-action-color: #ffffff;
-  --nav-action-hover-bg: rgba(255, 255, 255, 0.12);
-  --glass-card-bg: #332f2e;
-  --glass-card-border: rgba(247, 239, 235, 0.12);
-  --mobile-menu-bg: #332f2e;
-  --mobile-menu-hover-bg: rgba(255, 255, 255, 0.1);
+  --nav-action-color: var(--color-text);
+  --nav-action-hover-bg: color-mix(in srgb, var(--palette-inverse-on-surface) 12%, transparent);
+  --glass-card-bg: color-mix(in srgb, var(--palette-inverse-surface) 92%, transparent);
+  --glass-card-border: color-mix(in srgb, var(--palette-inverse-on-surface) 22%, transparent);
+  --mobile-menu-bg: var(--color-surface-highest);
+  --mobile-menu-hover-bg: color-mix(in srgb, var(--palette-inverse-on-surface) 10%, transparent);
   --mobile-menu-hover-color: var(--palette-inverse-primary);
   --color-glass-bg: var(--glass-card-bg);
   --color-glass-border: var(--glass-card-border);
   --color-card-elevated: var(--color-surface-container);
+  --glass-blur: 6px;
 }

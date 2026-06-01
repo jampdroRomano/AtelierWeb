@@ -22,8 +22,8 @@
   --color-overlay-dark: rgba(0, 0, 0, 0.4);
   --color-gradient-hero: color-mix(in srgb, var(--palette-primary-container) 35%, transparent);
 
-  --nav-pill-bg: rgba(255, 255, 255, 0.15);
-  --nav-pill-border: rgba(255, 255, 255, 0.2);
+  --nav-pill-bg: rgba(255, 255, 255, 0.92);
+  --nav-pill-border: rgba(255, 255, 255, 0.55);
   --nav-brand-color: var(--palette-on-surface);
   --nav-link-color: var(--palette-on-surface-variant);
   --nav-link-hover-color: var(--palette-primary);
@@ -37,4 +37,5 @@
   --color-glass-bg: var(--glass-card-bg);
   --color-glass-border: var(--glass-card-border);
   --color-card-elevated: var(--palette-surface-container-lowest);
+  --glass-blur: 6px;
 }

@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ateliê da celia — Ateliê Digital</title>
+  <link rel="icon" type="image/x-icon" href="/src/assets/icons/asset01.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="/src/assets/icons/asset.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -15,13 +17,55 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="./src/pages/home/sections/contato.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Configuração de Cores e Espaçamentos do Protótipo -->
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-variant": "#e9e1dd",
+            "primary": "#9a442d",
+            "surface-container-highest": "#e9e1dd",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#5b1604",
+            "on-surface-variant": "#55423e",
+            "on-surface": "#1e1b19",
+            "surface-dim": "#e0d8d5",
+            "surface": "#fff8f5",
+            "secondary": "#635d5c",
+            "tertiary-fixed-dim": "#c6c7c6",
+            "error": "#ba1a1a"
+          },
+          spacing: {
+            "md": "1.5rem",
+            "sm": "1rem",
+            "gutter": "24px",
+            "xs": "0.5rem",
+            "lg": "3rem",
+            "xl": "5rem",
+            "container-max": "1280px"
+          },
+          fontFamily: {
+            "h2": ["EB Garamond"],
+            "body-md": ["Hanken Grotesk"],
+            "label-caps": ["Hanken Grotesk"]
+          }
+        }
+      }
+    }
+  </script>
 </head>
 
 <body>
 
   <header id="navbar" class="navbar">
     <a href="#" class="navbar__brand" aria-label="Início — Ateliê da Celia">
-      <img src="/src/assets/icons/logo-imagem.png" alt="" class="navbar__logo-icon" width="40" height="40"
+      <img src="/src/assets/icons/logo.svg" alt="" class="navbar__logo-icon" width="40" height="40"
         aria-hidden="true" />
       <span class="navbar__brand-name">Ateliê da Celia</span>
     </a>
@@ -72,7 +116,7 @@
 
       <div class="hero_media">
         <div class="image_wrapper">
-          <img alt="Ateliê de Costura Minimalista" class="hero_image" src="estudio-costura-minimalista.png" />
+          <img alt="Ateliê de Costura Minimalista" class="hero_image" src="estudio-costura-minimalista.webp" />
 
           <div class="glass_card">
             <p class="glass_card_title">Detalhes</p>
@@ -83,6 +127,37 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <section class="section-sobre" id="sobre">
+    <div class="container-max">
+      <div class="grid-layout">
+
+        <!-- Imagem -->
+        <div class="image-wrapper">
+          <figure class="image-figure">
+            <img src="public/servico-confeccao-detalhe-costura.webp" alt="Máquina de costura de perto" loading="lazy"
+              class="image-content" />
+          </figure>
+        </div>
+
+        <!-- Conteúdo -->
+        <div class="content-wrapper">
+          <h2 class="heading-primary">
+            A História da Nossa Marca
+          </h2>
+          <div class="divider-line" aria-hidden="true"></div>
+          <p class="text-body">
+            Nascido da paixão por materiais nobres e design atemporal, nosso ateliê representa um refúgio do ritmo
+            acelerado moderno. Acreditamos no luxo lento, onde cada etapa do processo criativo é respeitada e celebrada.
+          </p>
+          <p class="text-body">
+            Combinamos técnicas seculares com ferramentas de extrema precisão para esculpir peças que contam histórias,
+            ancoradas em nossa paleta de tons terrosos e texturas de pedra.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -99,121 +174,303 @@
 
           <div class="servicos-card servicos-card--featured">
             <div class="servicos-card__slideshow">
-              <img src="https://picsum.photos/id/48/1000/1500" alt="Design Personalizado 1"
+              <img src="public/servico-alfaiataria-sob-medida-atelie.webp"
+                alt="Costureira ajustando blazer em manequim dentro de ateliê de costura com tons neutros e ambiente elegante."
                 class="servicos-card__img active" />
-              <img src="https://picsum.photos/id/73/1000/1500" alt="Design Personalizado 2"
+              <img src="public/servico-confeccao-detalhe-costura.webp"
+                alt="Mesa de trabalho de ateliê com tecido, tesoura, fita métrica e croqui de vestido em composição minimalista."
+                class="servicos-card__img" />
+              <img src="public/servico-corte-e-modelagem-artesanal.webp"
+                alt="Máquina de costura trabalhando em tecido bege com linhas e acessórios de costura ao fundo."
                 class="servicos-card__img" />
               <div class="servicos-card__overlay"></div>
             </div>
 
             <div class="servicos-card__content">
-              <h3 class="servicos-card__title">Design Personalizado</h3>
-              <p class="servicos-card__text">Projetos únicos concebidos a partir da sua visão...</p>
+              <h3 class="servicos-card__title">Criação & Customização</h3>
+              <p class="servicos-card__text">Transformação de peças antigas e desenvolvimento de modelos sob medida...
+              </p>
             </div>
-          </div>
-
-          <div class="servicos-card">
-            <div class="servicos-card__icon">
-              <span class="material-symbols-outlined">palette</span>
-            </div>
-            <h3 class="servicos-card__title">Curadoria de Cores</h3>
-            <p class="servicos-card__text">Consultoria especializada em paletas orgânicas...</p>
           </div>
 
           <div class="servicos-card">
             <div class="servicos-card__icon">
               <span class="material-symbols-outlined">handyman</span>
             </div>
-            <h3 class="servicos-card__title">Restauração</h3>
-            <p class="servicos-card__text">Recuperação meticulosa de peças artesanais...</p>
+            <h3 class="servicos-card__title">Ajustes & Reformas</h3>
+            <p class="servicos-card__text">Serviços essenciais como barras, cós, troca de zíperes e reparos diários...
+            </p>
+          </div>
+
+          <div class="servicos-card">
+            <div class="servicos-card__icon">
+              <span class="material-symbols-outlined">palette</span>
+            </div>
+            <h3 class="servicos-card__title">Ocasiões Especiais</h3>
+            <p class="servicos-card__text">Ajustes finos e caimento impecável para ternos, camisas e vestidos de
+              festa...</p>
           </div>
 
         </div>
+
       </div>
     </section>
 
-    <section id="contato" class="contato" aria-labelledby="contato-titulo">
-      <div class="contato__container">
-
-        <div class="contato__header">
-          <h2 id="contato-titulo" class="contato__main-title">Fale Conosco</h2>
-          <p class="contato__subtitle">Tem um projeto em mente? Vamos transformá-lo em realidade.</p>
+    <!-- Section Galeria -->
+    <section class="galeria" id="galeria">
+      <div class="galeria__container">
+        <div class="galeria__header">
+          <div>
+            <h2 class="galeria__title text-h2">Galeria de Obras</h2>
+            <p class="galeria__subtitle text-body-md">Um vislumbre do nosso portfólio.</p>
+          </div>
         </div>
 
-        <div class="contato__grid">
-          <address class="contato__info">
-            <div class="contato__info-item">
-              <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
-              <div>
-                <strong>Endereço</strong>
-                <p>Atendimento Digital e Presencial (Sob agendamento)</p>
+        <!-- Masonry Layout -->
+        <div class="galeria__grid">
+          <div class="galeria__item">
+            <img alt="Acabamento polido de superfície em madeira nobre com brilho natural."
+              src="public/galeria-tecidos-naturais-linho.webp" class="galeria__image">
+            <div class="galeria__overlay">
+              <div class="galeria__overlay-content">
+                <p class="galeria__overlay-description">Tecidos de alta qualidade, para manter o conforto e a beleza.
+                </p>
               </div>
             </div>
+          </div>
 
-            <div class="contato__info-item">
-              <span class="material-symbols-outlined" aria-hidden="true">mail</span>
-              <div>
-                <strong>E-mail</strong>
-                <a href="mailto:ola@ateliedacelia.com.br">ola@ateliedacelia.com.br</a>
+          <div class="galeria__item">
+            <img alt="Drapagem artística de têxteis premium em composição visual equilibrada."
+              src="public/galeria-detalhes-insumos-costura.webp" class="galeria__image">
+            <div class="galeria__overlay">
+              <div class="galeria__overlay-content">
+                <p class="galeria__overlay-description">Linhas que proporcionam uma composição visual equilibrada.</p>
               </div>
             </div>
+          </div>
 
-            <div class="contato__info-item">
-              <span class="material-symbols-outlined" aria-hidden="true">call</span>
-              <div>
-                <strong>Telefone / WhatsApp</strong>
-                <a href="tel:+5544999999999">(44) 99999-9999</a>
+          <div class="galeria__item">
+            <img alt="Processo de tecelagem manual em tear tradicional com fios naturais."
+              src="public/galeria-moldes-para-criacao.webp" class="galeria__image">
+            <div class="galeria__overlay">
+              <div class="galeria__overlay-content">
+                <p class="galeria__overlay-description">Moldes feitos sobre medida para manter a elegância e a qualidade
+                  sobre a vestimenta.</p>
               </div>
             </div>
-          </address>
+          </div>
 
-          <form class="contato__form" data-contact-form novalidate>
-            <div class="form-group">
-              <label for="nome">Nome completo</label>
-              <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
-              <span class="form-error" aria-live="polite"></span>
+          <div class="galeria__item">
+            <img alt="Detalhe de textura em peça artesanal com relevo e volume pronunciados."
+              src="public/estudio-costura-minimalista.webp" class="galeria__image">
+            <div class="galeria__overlay">
+              <div class="galeria__overlay-content">
+                <p class="galeria__overlay-description">Um local especializado para a criação de pecas artesanais.</p>
+              </div>
             </div>
+          </div>
 
-            <div class="form-group">
-              <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" required placeholder="exemplo@email.com">
-              <span class="form-error" aria-live="polite"></span>
+          <div class="galeria__item">
+            <img alt="Composição minimalista de peças de cerâmica em diferentes alturas e formas."
+              src="public/maquina-costura-antiga-vintage.webp" class="galeria__image">
+            <div class="galeria__overlay">
+              <div class="galeria__overlay-content">
+                <p class="galeria__overlay-description">Métodos e técnicas passadas de geração em geração.</p>
+              </div>
             </div>
+          </div>
 
-            <div class="form-group">
-              <label for="telefone">Telefone</label>
-              <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
-              <span class="form-error" aria-live="polite"></span>
+          <div class="galeria__item">
+            <img alt="Paleta de cores naturais em fibras têxteis organizadas com precisão estética."
+              src="public/galeria-look-sob-medida-alfaiataria.webp" class="galeria__image">
+            <div class="galeria__overlay">
+              <div class="galeria__overlay-content">
+                <p class="galeria__overlay-description">Obra final de design complexo unindo múltiplas técnicas
+                  artesanais sofisticadas em harmonia perfeita.</p>
+              </div>
             </div>
+          </div>
 
-            <div class="form-group">
-              <label for="servico">Assunto / Serviço</label>
-              <select id="servico" name="servico" required>
-                <option value="" disabled selected>Selecione uma opção</option>
-                <option value="design-personalizado">Design Personalizado</option>
-                <option value="curadoria">Curadoria de Cores</option>
-                <option value="restauracao">Restauração</option>
-                <option value="outro">Outro assunto</option>
-              </select>
-              <span class="form-error" aria-live="polite"></span>
+          <div class="galeria__item">
+            <img alt="Obra final de design complexo unindo múltiplas técnicas artesanais sofisticadas."
+              src="public/servico-confeccao-detalhe-costura.webp" class="galeria__image">
+            <div class="galeria__overlay">
+              <div class="galeria__overlay-content">
+                <p class="galeria__overlay-description">A precisão e o cuidado em cada detalhe do processo.</p>
+              </div>
             </div>
+          </div>
 
-            <div class="form-group form-group--full">
-              <label for="mensagem">Mensagem</label>
-              <textarea id="mensagem" name="mensagem" rows="5" required
-                placeholder="Conte-nos sobre sua ideia..."></textarea>
-              <span class="form-error" aria-live="polite"></span>
+          <div class="galeria__item">
+            <img alt="Instalação de peças em ambiente de galeria mostrando escala e impacto visual."
+              src="public/servico-corte-e-modelagem-artesanal.webp" class="galeria__image">
+            <div class="galeria__overlay">
+              <div class="galeria__overlay-content">
+                <p class="galeria__overlay-description">Ferramentas, matéria-prima e paixão pelo que fazemos.</p>
+              </div>
             </div>
-
-            <button type="submit" class="btn-submit form-group--full">Enviar Mensagem</button>
-
-            <div class="form-feedback form-group--full" aria-live="polite" hidden></div>
-          </form>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section id="depoimentos" class="depoimentos">
+      <div class="depoimentos__container">
+        <span class="material-symbols-outlined depoimentos__quote-icon">format_quote</span>
+        <h2 class="depoimentos__title">Palavras de Nossos Clientes</h2>
+
+        <div class="depoimentos__slider-wrapper">
+
+          <button type="button" class="depoimentos__arrow-floating depoimentos__arrow--prev"
+            aria-label="Depoimento anterior">
+            <span class="material-symbols-outlined">chevron_left</span>
+          </button>
+
+          <div class="depoimentos__slider">
+            <div class="depoimentos__slide active">
+              <p class="depoimentos__text">
+                "O ateliê conseguiu traduzir perfeitamente a essência do que buscávamos: uma peça que não apenas compõe
+                o ambiente, mas que respira história e cuidado em cada detalhe."
+              </p>
+              <div class="depoimentos__author">
+                <p class="depoimentos__author-name">Marina & Carlos Silva</p>
+                <p class="depoimentos__author-role">Colecionadores</p>
+              </div>
+            </div>
+
+            <div class="depoimentos__slide">
+              <p class="depoimentos__text">
+                "Excelente atendimento e acabamento impecável. É nítido o amor e a dedicação colocados em cada ponto e
+                na escolha dos tecidos. Superou todas as expectativas."
+              </p>
+              <div class="depoimentos__author">
+                <p class="depoimentos__author-name">Ana Beatriz</p>
+                <p class="depoimentos__author-role">Cliente Particular</p>
+              </div>
+            </div>
+
+            <div class="depoimentos__slide">
+              <p class="depoimentos__text">
+                "Restauração impecável de um terno de família. O cuidado técnico e o respeito pela peça original foram
+                comoventes. Recomendo de olhos fechados."
+              </p>
+              <div class="depoimentos__author">
+                <p class="depoimentos__author-name">Ricardo Mendes</p>
+                <p class="depoimentos__author-role">Arquiteto</p>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="depoimentos__arrow-floating depoimentos__arrow--next"
+            aria-label="Próximo depoimento">
+            <span class="material-symbols-outlined">chevron_right</span>
+          </button>
+
+        </div>
+
+        <div class="depoimentos__dots">
+          <button type="button" class="depoimentos__dot active" aria-label="Ver depoimento 1"></button>
+          <button type="button" class="depoimentos__dot" aria-label="Ver depoimento 2"></button>
+          <button type="button" class="depoimentos__dot" aria-label="Ver depoimento 3"></button>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="py-xl px-gutter bg-surface-container-highest border-t border-surface-dim" id="contato">
+      <div
+        class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-xl bg-surface p-lg rounded-2xl shadow-[0_20px_40px_rgba(41,37,36,0.08)]">
+
+        <div>
+          <h2 class="font-h2 text-h2 text-on-surface mb-sm">Iniciar um Diálogo</h2>
+          <p class="font-body-md text-body-md text-on-surface-variant mb-lg">
+            Preencha o formulário abaixo para nos contar sobre sua visão. Retornaremos em breve para agendar uma
+            consulta em nosso ateliê.
+          </p>
+          <div class="space-y-sm text-on-surface-variant font-body-md text-sm">
+            <p class="flex items-center gap-xs">
+              <span class="material-symbols-outlined text-primary text-sm" data-icon="mail">mail</span>
+              atelier@exemplo.com
+            </p>
+            <p class="flex items-center gap-xs">
+              <span class="material-symbols-outlined text-primary text-sm" data-icon="location_on">location_on</span>
+              São Paulo, SP - Brasil
+            </p>
+          </div>
+        </div>
+
+        <form class="space-y-md flex flex-col justify-center" data-contact-form novalidate>
+
+          <div class="relative">
+            <label class="font-label-caps text-[0.65rem] text-secondary tracking-widest uppercase mb-1 block"
+              for="nome">Nome Completo</label>
+            <input
+              class="w-full bg-transparent border-0 border-b border-surface-dim focus:border-primary focus:ring-0 px-0 py-xs text-on-surface font-body-md transition-colors placeholder-tertiary-fixed-dim"
+              id="nome" name="nome" placeholder="Como devemos chamá-lo?" required type="text" />
+            <span class="form-error text-[0.7rem] text-error" aria-live="polite"></span>
+          </div>
+
+          <div class="relative">
+            <label class="font-label-caps text-[0.65rem] text-secondary tracking-widest uppercase mb-1 block"
+              for="servico">Serviço Pretendido</label>
+            <select
+              class="w-full bg-transparent border-0 border-b border-surface-dim focus:border-primary focus:ring-0 px-0 py-xs text-on-surface font-body-md transition-colors"
+              id="servico" name="servico" required>
+              <option disabled="" selected="" value="">Selecione uma área de interesse</option>
+              <option value="design">Design Personalizado</option>
+              <option value="curadoria">Curadoria de Cores</option>
+              <option value="restauracao">Restauração</option>
+              <option value="outro">Outro</option>
+            </select>
+            <span class="form-error text-[0.7rem] text-error" aria-live="polite"></span>
+          </div>
+
+          <div class="relative">
+            <label class="font-label-caps text-[0.65rem] text-secondary tracking-widest uppercase mb-1 block"
+              for="descricao">Descrição do Problema / Visão</label>
+            <textarea
+              class="w-full bg-transparent border-0 border-b border-surface-dim focus:border-primary focus:ring-0 px-0 py-xs text-on-surface font-body-md transition-colors resize-none placeholder-tertiary-fixed-dim"
+              id="descricao" name="mensagem" placeholder="Descreva brevemente o que você busca realizar conosco..."
+              required rows="3"></textarea>
+            <span class="form-error text-[0.7rem] text-error" aria-live="polite"></span>
+          </div>
+
+          <div class="pt-sm">
+            <button
+              class="w-full bg-primary text-on-primary rounded-full px-lg py-sm font-label-caps text-label-caps hover:bg-on-primary-container transition-colors shadow-lg shadow-primary/10"
+              type="submit">
+              Enviar Mensagem
+            </button>
+          </div>
+
+          <div class="form-feedback hidden text-center font-body-md text-sm mt-2 rounded p-2" aria-live="polite"></div>
+        </form>
+
       </div>
     </section>
   </div>
+
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__brand">
+        <p class="footer__name">Ateliê da Celia</p>
+        <p class="footer__legal text-body-md">
+          © 2024 Ateliê da Celia.<br />
+          CNPJ: 00.000.000/0001-00.<br />
+          Todos os direitos reservados.
+        </p>
+      </div>
+      <nav class="footer__nav" aria-label="Rodapé">
+        <a class="footer__link text-label-caps" href="#">Privacidade LGPD</a>
+        <a class="footer__link text-label-caps" href="#">Localização</a>
+        <a class="footer__link text-label-caps" href="#">Termos de Uso</a>
+      </nav>
+    </div>
+  </footer>
+
   <script type="module" src="/src/main.js"></script>
+
+
 </body>
 
 </html>
