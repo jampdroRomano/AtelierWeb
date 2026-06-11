@@ -139,19 +139,19 @@
   width: 100%;
   padding: var(--space-sm) var(--space-lg);
   border-radius: 999px;
-  background-color: var(--color-primary);
-  color: var(--color-on-primary);
+  background-color: #CD7B4C;
+  color: #fff;
   font-family: var(--font-body);
   font-weight: var(--fw-semibold);
   letter-spacing: var(--text-label-ls);
   text-transform: uppercase;
   font-size: var(--text-label-size);
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: var(--shadow-primary-soft);
+  box-shadow: 0 10px 20px rgba(154, 68, 45, 0.2);
 }
 
 .contato__submit:hover {
-  background-color: var(--color-primary-hover);
+  background-color: #b86a3f;
 }
 
 @media (min-width: 768px) {

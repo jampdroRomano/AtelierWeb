@@ -1,3 +1,7 @@
+:root {
+  --navbar-scroll-offset: calc(1.52rem + (var(--space-sm) * 2) + 1.0rem + 0.75rem);
+}
+
 .navbar {
   position: fixed;
   top: 1.5rem;
@@ -41,8 +45,8 @@
 
 .navbar__logo-icon {
   display: block;
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 3.25rem;
+  width: 3.25rem;
   flex-shrink: 0;
   object-fit: contain;
 }
@@ -249,9 +253,13 @@
     padding: var(--space-sm) var(--space-md);
   }
 
+  :root {
+    --navbar-scroll-offset: calc(0.625rem + (var(--space-sm) * 2) + 2.75rem + 0.75rem);
+  }
+
   .navbar__logo-icon {
-    height: 2rem;
-    width: 2rem;
+    height: 2.75rem;
+    width: 2.75rem;
   }
 
   .navbar__brand-name {
