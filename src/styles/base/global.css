@@ -1,5 +1,10 @@
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--navbar-scroll-offset);
+}
+
+section[id] {
+  scroll-margin-top: var(--navbar-scroll-offset);
 }
 
 body {

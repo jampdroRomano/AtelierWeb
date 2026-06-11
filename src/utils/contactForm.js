@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = '5511999999999';
+const WHATSAPP_NUMBER = '5544991147517';
 
 const SERVICO_LABELS = {
   design: 'Design Personalizado',
@@ -6,6 +6,28 @@ const SERVICO_LABELS = {
   restauracao: 'Restauração',
   outro: 'Outro',
 };
+
+const FIELD_MESSAGES = {
+  nome: 'Preencha este campo.',
+  servico: 'Selecione um item da lista.',
+  descricao: 'Preencha este campo.',
+};
+
+function setupPortugueseValidation(form) {
+  Object.entries(FIELD_MESSAGES).forEach(([name, message]) => {
+    const field = form.elements[name];
+    if (!field) return;
+
+    const clearMessage = () => field.setCustomValidity('');
+
+    field.addEventListener('invalid', () => {
+      field.setCustomValidity(message);
+    });
+
+    field.addEventListener('input', clearMessage);
+    field.addEventListener('change', clearMessage);
+  });
+}
 
 function buildWhatsAppMessage(form) {
   const nome = form.nome.value.trim();
@@ -15,7 +37,7 @@ function buildWhatsAppMessage(form) {
   const descricao = form.descricao.value.trim();
 
   return [
-    'Olá! Gostaria de iniciar um diálogo com o ateliê.',
+    'Olá! Gostaria de realizar um serviço.',
     '',
     `Nome: ${nome}`,
     `Serviço: ${servico}`,
@@ -26,6 +48,8 @@ function buildWhatsAppMessage(form) {
 export function initContactForm() {
   const form = document.getElementById('contato-form');
   if (!form) return;
+
+  setupPortugueseValidation(form);
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
